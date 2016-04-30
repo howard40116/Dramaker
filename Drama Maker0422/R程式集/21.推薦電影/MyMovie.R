@@ -1,8 +1,7 @@
-library(tidyr)
+﻿library(tidyr)
 library(data.table)
 library(dplyr)
 library(reshape2)
-
 argv<-commandArgs(TRUE)
 
 #argv <- gsub("\\,",replacement="\\,",argv)
@@ -82,5 +81,5 @@ print(as.character(moviename[1:3,1]))
 }
 
 
-# getelementmatrix("hunter","knife","missal","animal","army"))
+# getelementmatrix("hunter","knife","missal","animal","army")
 getelementmatrix(argv)
