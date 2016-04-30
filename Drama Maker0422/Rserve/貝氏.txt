@@ -1,0 +1,37 @@
+package rjava;
+ 
+
+import org.rosuda.REngine.REXPMismatchException;  
+import org.rosuda.REngine.Rserve.RConnection;  
+import org.rosuda.REngine.Rserve.RserveException;  
+  
+public class RserveBegin {  
+    public static void main(String[] args) {  
+        try {  
+            callRserve();  
+        } catch (RserveException e) {  
+            e.printStackTrace();  
+        } catch (REXPMismatchException e) {  
+            e.printStackTrace();  
+        }  
+    }  
+      
+    static void callRserve() throws RserveException, REXPMismatchException {  
+        RConnection rConnection = new RConnection();  
+          
+        String rv = rConnection.eval("R.version.string").asString();  
+        System.out.println(rv);  
+ //       rConnection.eval("x1=read.csv('C:/Users/howard/Desktop/catetable.csv')"); 
+ //       rConnection.eval("x1=na.exclude(x1)");
+ //       rConnection.eval("np=ceiling(0.1*nrow(x1))");
+ //       rConnection.eval("test.index=sample(1:nrow(x1),np)");
+ //       rConnection.eval("x1.test=x1[test.index,]");
+ //       rConnection.eval("x1.train=x1[-test.index,]");
+ //       rConnection.eval("x1.tree=naiveBayes(x1.train$imdb ~ . , data=x1.train)");
+ //       rConnection.eval("x1=as.character(predict(x1.tree, c(1)))");
+        
+        String  arr = rConnection.eval("version").asString();            
+        System.out.println(arr);            
+          
+    }  
+}  

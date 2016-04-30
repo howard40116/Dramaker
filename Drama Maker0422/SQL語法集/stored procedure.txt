@@ -1,0 +1,60 @@
+﻿for(i in 1:nrow(x8))
+{
+
+if (x8$water[i] > 0.5 && x8$mother[i] > 0.5 ) {imdb[i]=7.764706
+}else if (x8$water[i] > 0.5 && x8$mother[i] < 0.5){imdb[i]=7.333
+}else if (x8$water[i] < 0.5 && x8$wife[i] > 0.5){imdb[i]=7.885714
+}else if (x8$water[i] < 0.5 && x8$wife[i] < 0.5 && x8$gun[i] > 0.5){imdb[i]=6.677778
+}else if (x8$water[i] < 0.5 && x8$wife[i] < 0.5 && x8$gun[i] < 0.5 && x8$news[i] >= 0.5){imdb[i]=7.562500
+}else if (x8$water[i] < 0.5 && x8$wife[i] < 0.5 && x8$gun[i] < 0.5 && x8$news[i] < 0.5 && x8$cell[i] >= 0.5){imdb[i]=7.557143
+}else if (x8$water[i] < 0.5 && x8$wife[i] < 0.5 && x8$gun[i] < 0.5 && x8$news[i] < 0.5 && x8$cell[i] < 0.5 && x8$family[i]>=0.5){imdb[i]=7.410000
+}else if (x8$water[i] < 0.5 && x8$wife[i] < 0.5 && x8$gun[i] < 0.5 && x8$news[i] < 0.5 && x8$cell[i]< 0.5 && x8$family[i]>=0.5 && x8$white[i]>=0.5){imdb[i]=7.325000
+}else {imdb[i]=6.761111}
+
+
+DECLARE @Pred_IMDB float
+ if(select water from [dbo].[summaryt] ) = 1     
+ BEGIN
+	 insert into [dbo].[IMDB]
+	 ([IMDB]) VALUES (7.764706)
+ END
+ BEGIN
+     SET @Pred_IMDB = 6.677778
+	 insert into [dbo].[IMDB]
+	 ([IMDB]) VALUES (6.677778)
+ END
+ BEGIN
+     SET @Pred_IMDB = 6.677778
+	 insert into [dbo].[IMDB]
+	 ([IMDB]) VALUES (6.677778)
+ END
+ BEGIN
+     SET @Pred_IMDB = 6.677778
+	 insert into [dbo].[IMDB]
+	 ([IMDB]) VALUES (6.677778)
+ END
+ BEGIN
+     SET @Pred_IMDB = 6.677778
+	 insert into [dbo].[IMDB]
+	 ([IMDB]) VALUES (6.677778)
+ END
+ BEGIN
+     SET @Pred_IMDB = 6.677778
+	 insert into [dbo].[IMDB]
+	 ([IMDB]) VALUES (6.677778)
+ END
+
+  ELSE  SET @Pred_IMDB = 6.761111
+  END
+"Pred_IMDB",
+FROM [summaryt];
+
+　　	
+
+
+
+
+
+
+INSERT INTO DEPCOD
+(DepCode, DepShortName, DepFullName) VALUES ("332", "運管", "運輸科技與管理學系")

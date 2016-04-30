@@ -1,0 +1,88 @@
+#######################讀取關鍵字版EXCEL
+my.read.csv=function(y)
+{
+read.csv(paste0("C:/Users/howard/Desktop/data/",y,".CSV"))
+}
+x1=my.read.csv("12 Years a Slave")
+x2=my.read.csv("AMERICAN HUSTLE")
+x3=my.read.csv("Amour")
+x4=my.read.csv("ARGO")
+x5=my.read.csv("BEASTS OF THE SOUTHERN WILD")
+x6=my.read.csv("before midnight")
+x7=my.read.csv("belle")
+x8=my.read.csv("birdman")
+x9=my.read.csv("boyhood")
+x10=my.read.csv("Bridge of Spies")
+x11=my.read.csv("calvary")
+x12=my.read.csv("Carol")
+x13=my.read.csv("CELESTE AND JESSE FOREVER")
+x14=my.read.csv("Concussion")
+x15=my.read.csv("DALLAS BUYERS CLUB")
+x16=my.read.csv("Enough Said")
+x17=my.read.csv("Ex Machina")
+x18=my.read.csv("FLIGHT")
+x19=my.read.csv("Grandma")
+x20=my.read.csv("HITCHCOCK")
+x21=my.read.csv("I Smile Back")
+x22=my.read.csv("Inside Out")
+x23=my.read.csv("Kill The Messenger")
+x24=my.read.csv("Kill Your Darlings")
+x25=my.read.csv("Labor Day")
+x26=my.read.csv("Learning To Drive")
+x27=my.read.csv("Legend")
+x28=my.read.csv("Macbeth")
+x29=my.read.csv("Minions")
+x30=my.read.csv("Mississipi Grind")
+x31=my.read.csv("NEBRASKA")
+x32=my.read.csv("Pawn Sacrifice")
+x33=my.read.csv("Prisoners")
+x34=my.read.csv("Remember")
+x35=my.read.csv("Room")
+x36=my.read.csv("RUST AND BONE")
+x37=my.read.csv("SILVER LININGS PLAYBOOK")
+x38=my.read.csv("Son of Saul")
+x39=my.read.csv("Spotlight")
+x40=my.read.csv("Straight Outta Compton")
+x41=my.read.csv("Suffragette")
+x42=my.read.csv("Testament of Youth")
+x43=my.read.csv("The Armstrong Lie")
+x44=my.read.csv("The Big Short")
+x45=my.read.csv("The Box Trolls")
+x46=my.read.csv("The Danish Girl")
+x47=my.read.csv("The Diary of a Teenage Girl")
+x48=my.read.csv("The End of the Tour")
+x49=my.read.csv("The Grand Budapest Hotel")
+x50=my.read.csv("The Invisible Woman")
+x51=my.read.csv("The Keeping Room")
+x52=my.read.csv("The Lady in the Van")
+x53=my.read.csv("THE PAST")
+x54=my.read.csv("The Place Beyond The Pines")
+x55=my.read.csv("THE SESSIONS")
+x56=my.read.csv("The Theory of Everything")
+x57=my.read.csv("The Way, Way Back")
+x58=my.read.csv("THE WOLF OF WALL STREET")
+x59=my.read.csv("Trainwreck")
+x60=my.read.csv("Trumbo")
+x61=my.read.csv("Truth")
+x62=my.read.csv("Wadjda")
+x63=my.read.csv("While We're Young")
+x64=my.read.csv("Woman In Gold")
+x65=my.read.csv("Slow West")
+x66=my.read.csv("SMASHED")
+x67=my.read.csv("Infinitely Polar Bear")
+
+
+
+domatrix=do.call(rbind, lapply( paste0("x", 1:67) , get))
+write.csv(domatrix,"C:/Users/howard/Desktop/tmp2.csv",row.names=FALSE)
+####################接下來請用EXCEL樞紐表
+
+
+
+
+
+
+
+
+
+

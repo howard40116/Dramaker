@@ -1,0 +1,50 @@
+﻿package rjava;
+
+import org.rosuda.REngine.REXP;
+import org.rosuda.REngine.Rserve.*;
+
+public class RserveBegin {
+
+	public static void main(String[] args) throws Exception{
+
+		String[] myvalues = {"NGDF"};
+
+		RConnection c = null;
+
+		try{
+
+			c = new RConnection();
+
+			c.assign("myvalues", myvalues);
+
+			REXP x = c.eval("myvalues");
+
+			System.out.println(x.asString());
+
+			//x = c.eval("sd(myvalues)");
+
+			//System.out.println(x.asDouble());
+
+		}catch(Exception e){
+
+			e.printStackTrace();
+
+		}finally{
+
+			if ( c != null ){
+
+				try{
+
+					c.close();
+
+				}finally{}
+
+			}
+
+		}
+
+
+
+	}
+
+}

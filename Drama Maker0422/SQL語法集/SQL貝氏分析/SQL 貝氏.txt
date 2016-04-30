@@ -1,0 +1,189 @@
+SELECT
+  [LR2].[Imdb]
+From
+  [LR2]
+PREDICTION JOIN
+  OPENQUERY([D Maker],
+    'SELECT
+      [animal],
+      [army],
+      [art],
+      [baseball],
+      [bear],
+      [beer],
+      [blue],
+      [boss],
+      [brother],
+      [buffalo],
+      [camera],
+      [castle],
+      [cave],
+      [cell],
+      [cigarette],
+      [city],
+      [cliff],
+      [college],
+      [colony],
+      [company],
+      [computer],
+      [desert],
+      [dorm],
+      [dragon],
+      [driver],
+      [duke],
+      [evil],
+      [family],
+      [father],
+      [fire],
+      [fish],
+      [friend],
+      [galaxy],
+      [gun],
+      [helicopter],
+      [horse],
+      [hotel],
+      [human],
+      [hunter],
+      [husband],
+      [iron],
+      [judge],
+      [jungle],
+      [keyword],
+      [kid],
+      [knife],
+      [laboratory],
+      [lie],
+      [love],
+      [magic],
+      [manager],
+      [mask],
+      [meeting],
+      [missal],
+      [money],
+      [monster],
+      [mother],
+      [mountain],
+      [music],
+      [news],
+      [ninja],
+      [office],
+      [paint],
+      [party],
+      [plane],
+      [planet],
+      [president],
+      [prince],
+      [princess],
+      [queen],
+      [raven],
+      [rain],
+      [resistance],
+      [restaurant],
+      [river],
+      [robot],
+      [science],
+      [sea],
+      [ship],
+      [sister],
+      [slave],
+      [snow],
+      [soldier],
+      [study],
+      [train],
+      [village],
+      [water],
+      [white],
+      [wife]
+    FROM
+      [dbo].[sccs]
+    ') AS t
+ON
+  [LR2].[Animal] = t.[animal] AND
+  [LR2].[Army] = t.[army] AND
+  [LR2].[Art] = t.[art] AND
+  [LR2].[Baseball] = t.[baseball] AND
+  [LR2].[Bear] = t.[bear] AND
+  [LR2].[Beer] = t.[beer] AND
+  [LR2].[Blue] = t.[blue] AND
+  [LR2].[Boss] = t.[boss] AND
+  [LR2].[Brother] = t.[brother] AND
+  [LR2].[Buffalo] = t.[buffalo] AND
+  [LR2].[Camera] = t.[camera] AND
+  [LR2].[Castle] = t.[castle] AND
+  [LR2].[Cave] = t.[cave] AND
+  [LR2].[Cell] = t.[cell] AND
+  [LR2].[Cigarette] = t.[cigarette] AND
+  [LR2].[City] = t.[city] AND
+  [LR2].[Cliff] = t.[cliff] AND
+  [LR2].[College] = t.[college] AND
+  [LR2].[Colony] = t.[colony] AND
+  [LR2].[Company] = t.[company] AND
+  [LR2].[Computer] = t.[computer] AND
+  [LR2].[Desert] = t.[desert] AND
+  [LR2].[Dorm] = t.[dorm] AND
+  [LR2].[Dragon] = t.[dragon] AND
+  [LR2].[Driver] = t.[driver] AND
+  [LR2].[Duke] = t.[duke] AND
+  [LR2].[Evil] = t.[evil] AND
+  [LR2].[Family] = t.[family] AND
+  [LR2].[Father] = t.[father] AND
+  [LR2].[Fire] = t.[fire] AND
+  [LR2].[Fish] = t.[fish] AND
+  [LR2].[Friend] = t.[friend] AND
+  [LR2].[Galaxy] = t.[galaxy] AND
+  [LR2].[Gun] = t.[gun] AND
+  [LR2].[Helicopter] = t.[helicopter] AND
+  [LR2].[Horse] = t.[horse] AND
+  [LR2].[Hotel] = t.[hotel] AND
+  [LR2].[Human] = t.[human] AND
+  [LR2].[Hunter] = t.[hunter] AND
+  [LR2].[Husband] = t.[husband] AND
+  [LR2].[Iron] = t.[iron] AND
+  [LR2].[Judge] = t.[judge] AND
+  [LR2].[Jungle] = t.[jungle] AND
+  [LR2].[Keyword] = t.[keyword] AND
+  [LR2].[Kid] = t.[kid] AND
+  [LR2].[Knife] = t.[knife] AND
+  [LR2].[Laboratory] = t.[laboratory] AND
+  [LR2].[Lie] = t.[lie] AND
+  [LR2].[Love] = t.[love] AND
+  [LR2].[Magic] = t.[magic] AND
+  [LR2].[Manager] = t.[manager] AND
+  [LR2].[Mask] = t.[mask] AND
+  [LR2].[Meeting] = t.[meeting] AND
+  [LR2].[Missal] = t.[missal] AND
+  [LR2].[Money] = t.[money] AND
+  [LR2].[Monster] = t.[monster] AND
+  [LR2].[Mother] = t.[mother] AND
+  [LR2].[Mountain] = t.[mountain] AND
+  [LR2].[Music] = t.[music] AND
+  [LR2].[News] = t.[news] AND
+  [LR2].[Ninja] = t.[ninja] AND
+  [LR2].[Office] = t.[office] AND
+  [LR2].[Paint] = t.[paint] AND
+  [LR2].[Party] = t.[party] AND
+  [LR2].[Plane] = t.[plane] AND
+  [LR2].[Planet] = t.[planet] AND
+  [LR2].[President] = t.[president] AND
+  [LR2].[Prince] = t.[prince] AND
+  [LR2].[Princess] = t.[princess] AND
+  [LR2].[Queen] = t.[queen] AND
+  [LR2].[Raven] = t.[raven] AND
+  [LR2].[Rain] = t.[rain] AND
+  [LR2].[Resistance] = t.[resistance] AND
+  [LR2].[Restaurant] = t.[restaurant] AND
+  [LR2].[River] = t.[river] AND
+  [LR2].[Robot] = t.[robot] AND
+  [LR2].[Science] = t.[science] AND
+  [LR2].[Sea] = t.[sea] AND
+  [LR2].[Ship] = t.[ship] AND
+  [LR2].[Sister] = t.[sister] AND
+  [LR2].[Slave] = t.[slave] AND
+  [LR2].[Snow] = t.[snow] AND
+  [LR2].[Soldier] = t.[soldier] AND
+  [LR2].[Study] = t.[study] AND
+  [LR2].[Train] = t.[train] AND
+  [LR2].[Village] = t.[village] AND
+  [LR2].[Water] = t.[water] AND
+  [LR2].[White] = t.[white] AND
+  [LR2].[Wife] = t.[wife]

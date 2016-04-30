@@ -1,0 +1,31 @@
+﻿package rjava;
+ 
+
+import org.rosuda.REngine.REXPMismatchException;  
+import org.rosuda.REngine.Rserve.RConnection;  
+import org.rosuda.REngine.Rserve.RserveException;  
+  
+public class RserveBegin {  
+    public static void main(String[] args) {  
+        try {  
+            callRserve();  
+        } catch (RserveException e) {  
+            e.printStackTrace();  
+        } catch (REXPMismatchException e) {  
+            e.printStackTrace();  
+        }  
+    }  
+      
+    static void callRserve() throws RserveException, REXPMismatchException {  
+        RConnection rConnection = new RConnection();  
+          
+        String rv = rConnection.eval("R.version.string").asString();  
+        System.out.println(rv);  
+        double [] xx1 = rConnection.eval("x1=5").asDoubles(); 
+        double [] xx2 = rConnection.eval("x2=7").asDoubles();
+        double [] arr = rConnection.eval("rbind(x1,x2)").asDoubles();  
+        for(double d : arr) {  
+            System.out.println(d);            
+        }  
+    }  
+}  

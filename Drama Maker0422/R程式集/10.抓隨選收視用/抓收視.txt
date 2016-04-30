@@ -1,0 +1,34 @@
+#直播各節目收視率
+
+library(dplyr)
+library(magrittr)
+library(httr)
+
+search=function(xxx,yyy)
+{
+res = httr::POST(
+url = "http://54.92.30.60:80/api/tv/progwatch",
+body = list(
+st="20150501",
+et="20150531",
+t=1,
+p=xxx,
+d=2,
+token = "api_doc_token"), 
+encode = "form")
+res %>% content %>% str
+tmp=res %>% content
+tmp2=tmp$data
+tmp3=sapply(tmp2,"[",8)
+tmp4=t(tmp3)
+tmp5=cbind(tmp4[1:ncol(tmp4)])
+tmp6=cbind(xxx,tmp5)
+write.table(tmp6,paste0("C:/Users/howard/Desktop/data/",yyy,".CSV"), sep = ",",row.names=FALSE)    ###<<<<<<<改路徑
+}
+
+x1=read.csv("C:/Users/howard/Desktop/所有隨選節目.csv")              ###<<<<<<<改路徑
+for(i in 1:1000)                                                     ###<<<<<<<改1~61042
+{
+x2=x1[[2]][i]
+search(x2,i)
+}
