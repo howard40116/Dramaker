@@ -1,4 +1,4 @@
-﻿library(tidyr)
+library(tidyr)
 library(data.table)
 library(dplyr)
 library(reshape2)
@@ -13,7 +13,7 @@ getelementmatrix=function(...)
 # x        <-c("hunter","knife","missal","animal","army")
 x        <-c(...)
 x2       <-strsplit(x,split=",",fixed=T)
-sumtable <-read.csv("E:/Dramaker/Drama Maker0422/R程式集/21.推薦電影/summary.csv")
+sumtable <-read.csv("C:/Users/howard/Desktop/summary.csv")
 sumtable <-sumtable[order(sumtable$IMDB,decreasing = TRUE),]
 
 
@@ -43,17 +43,17 @@ movienameisna<-moviename[1:3,1][1]%>%as.character%>%is.na()
 
 #2.3開始檢查
 if(length(x2)==1 && movienameisna){
-  moviename<-filter(sumtable,sumtable[,x2.random[1]]=="Y")  
+  moviename<-filter(sumtable,sumtable[,x2.random[1]]=="Y")
 }else if(length(x2)==2 && movienameisna){
-  moviename<-filter(sumtable,sumtable[,x2.random[1]]=="Y" | sumtable[,x2.random[2]]=="Y")  
+  moviename<-filter(sumtable,sumtable[,x2.random[1]]=="Y" | sumtable[,x2.random[2]]=="Y")
 }else if(length(x2)==3 && movienameisna){
-  moviename<-filter(sumtable,sumtable[,x2.random[1]]=="Y" & sumtable[,x2.random[2]]=="Y")  
+  moviename<-filter(sumtable,sumtable[,x2.random[1]]=="Y" & sumtable[,x2.random[2]]=="Y")
 }else if(length(x2)==4 && movienameisna){
-  moviename<-filter(sumtable,sumtable[,x2.random[1]]=="Y" & sumtable[,x2.random[2]]=="Y" & sumtable[,x2.random[3]]=="Y")  
+  moviename<-filter(sumtable,sumtable[,x2.random[1]]=="Y" & sumtable[,x2.random[2]]=="Y" & sumtable[,x2.random[3]]=="Y")
 }else if(length(x2)==5 && movienameisna){
-  moviename<-filter(sumtable,sumtable[,x2.random[1]]=="Y" & sumtable[,x2.random[2]]=="Y" & sumtable[,x2.random[3]]=="Y")  
+  moviename<-filter(sumtable,sumtable[,x2.random[1]]=="Y" & sumtable[,x2.random[2]]=="Y" & sumtable[,x2.random[3]]=="Y")
 }else if(length(x2)==6 && movienameisna){
-  moviename<-filter(sumtable,sumtable[,x2.random[1]]=="Y" & sumtable[,x2.random[2]]=="Y" & sumtable[,x2.random[3]]=="Y")  
+  moviename<-filter(sumtable,sumtable[,x2.random[1]]=="Y" & sumtable[,x2.random[2]]=="Y" & sumtable[,x2.random[3]]=="Y")
 }
 
 
@@ -62,17 +62,17 @@ if(length(x2)==1 && movienameisna){
 movienameisna<-moviename[1:3,1][1]%>%as.character%>%is.na()
 #3.2開始檢查
 if(length(x2)==1 && movienameisna){
-  moviename<-filter(sumtable,sumtable[,x2.random[1]]=="Y")  
+  moviename<-filter(sumtable,sumtable[,x2.random[1]]=="Y")
 }else if(length(x2)==2 && movienameisna){
-  moviename<-filter(sumtable,sumtable[,x2.random[1]]=="Y" | sumtable[,x2.random[2]]=="Y")  
+  moviename<-filter(sumtable,sumtable[,x2.random[1]]=="Y" | sumtable[,x2.random[2]]=="Y")
 }else if(length(x2)==3 && movienameisna){
-  moviename<-filter(sumtable,sumtable[,x2.random[1]]=="Y" | sumtable[,x2.random[2]]=="Y")  
+  moviename<-filter(sumtable,sumtable[,x2.random[1]]=="Y" | sumtable[,x2.random[2]]=="Y")
 }else if(length(x2)==4 && movienameisna){
-  moviename<-filter(sumtable,sumtable[,x2.random[1]]=="Y" | sumtable[,x2.random[2]]=="Y" | sumtable[,x2.random[3]]=="Y")  
+  moviename<-filter(sumtable,sumtable[,x2.random[1]]=="Y" | sumtable[,x2.random[2]]=="Y" | sumtable[,x2.random[3]]=="Y")
 }else if(length(x2)==5 && movienameisna){
-  moviename<-filter(sumtable,sumtable[,x2.random[1]]=="Y" | sumtable[,x2.random[2]]=="Y" | sumtable[,x2.random[3]]=="Y")  
+  moviename<-filter(sumtable,sumtable[,x2.random[1]]=="Y" | sumtable[,x2.random[2]]=="Y" | sumtable[,x2.random[3]]=="Y")
 }else if(length(x2)==6 && movienameisna){
-  moviename<-filter(sumtable,sumtable[,x2.random[1]]=="Y" | sumtable[,x2.random[2]]=="Y" | sumtable[,x2.random[3]]=="Y")  
+  moviename<-filter(sumtable,sumtable[,x2.random[1]]=="Y" | sumtable[,x2.random[2]]=="Y" | sumtable[,x2.random[3]]=="Y")
 }
 
 
