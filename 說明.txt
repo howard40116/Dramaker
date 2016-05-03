@@ -1,12 +1,11 @@
-#R by mscmd https://www.youtube.com/watch?v=A1IIcZW5UrI
+ï»¿#R by mscmd https://www.youtube.com/watch?v=A1IIcZW5UrI
 #http://stackoverflow.com/questions/5604698/java-programming-call-an-exe-from-java-and-passing-parameters
-#¤W­±¤º®eªºjava§ï¼g
+#ä¸Šé¢å…§å®¹çš„javaæ”¹å¯«
 #Process process = new ProcessBuilder("C:\\PathToExe\\Rscript.exe","xxx.R","params").start();
 
 
-1.±NDEMO¥áC¼Ñ
-2.§âRscript¸ô®|§ó§ï
-3.¨Ì·Ó(https://www.youtube.com/watch?v=A1IIcZW5UrI)§ó§ïCMDÅª¨úRªº¸ô®|
-4.§Q¥ÎMVC¬[ºcªºeclipse¶}±ÒDramakerNEWR9.war
-5.§ó§ïJavaR.java¸ô®|
-6.RUN~~~
+1.å°‡DEMOä¸ŸCæ§½
+2.ä¾ç…§(https://www.youtube.com/watch?v=A1IIcZW5UrI)æ›´æ”¹CMDè®€å–Rçš„è·¯å¾‘
+3.åˆ©ç”¨MVCæ¶æ§‹çš„eclipseé–‹å•ŸDramakerNEWR9.war
+4.ç¢ºèªRçš„libraryéƒ½æœ‰å®‰è£
+5.RUN~~~
