@@ -1,0 +1,12 @@
+﻿S  "laboratory","robot","ship","snow","water"
+A  "sea"
+B  "helicopter"
+C  "river"
+D  
+E  "animal"
+F  "army"
+G  "village"
+H  "music"
+I  "cell"  
+
+keyword不要用

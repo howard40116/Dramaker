@@ -1,0 +1,12 @@
+#R by mscmd https://www.youtube.com/watch?v=A1IIcZW5UrI
+#http://stackoverflow.com/questions/5604698/java-programming-call-an-exe-from-java-and-passing-parameters
+#上面內容的java改寫
+#Process process = new ProcessBuilder("C:\\PathToExe\\Rscript.exe","xxx.R","params").start();
+
+
+1.將DEMO丟C槽
+2.把Rscript路徑更改
+3.依照(https://www.youtube.com/watch?v=A1IIcZW5UrI)更改CMD讀取R的路徑
+4.利用MVC架構的eclipse開啟DramakerNEWR9.war
+5.更改JavaR.java路徑
+6.RUN~~~
