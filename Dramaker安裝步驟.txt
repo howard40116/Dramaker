@@ -1,0 +1,22 @@
+﻿Dramaker安裝步驟
+
+
+eclipse端
+1.import war file，調整build path(JRE) library -> remove -> add
+2.tomcat 組態調整 : preference -> server -> runtime enviroment -> remove -> add
+3.下方狀態欄servers啟動tomcat
+4.調整build path(tomcat) library -> add -> server runtime
+5.調整JavaR(4個)、Rscript(3個)路徑 -> 路徑不能有空白(cmd會出錯)
+
+
+Rscript端
+1.設定環境變數(bin資料夾)
+2.RGui -> install.packages("tidyr")
+          install.packages("magrittr")
+          install.packages("data.table")
+          install.packages("dplyr")
+          install.packages("reshape2")
+          install.packages("e1071")
+          install.packages("gtools")
+3.開啟cmd -> D: -> Rscript所在路徑
+4.執行 Rscript MyMovie.R "animal" (測試cmd執行R是否正常)
