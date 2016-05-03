@@ -14,7 +14,7 @@ getelementmatrix=function(...)
 # x        <-c("hunter","knife","missal","animal","army")
 x        <-c(...)
 x2       <-strsplit(x,split=",",fixed=T)
-sumtable <-read.csv("C:/Users/Student/Desktop/summary.csv")
+sumtable <-read.csv("C:/DEMO/summary.csv")
 sumtable <-sumtable[order(sumtable$IMDB,decreasing = TRUE),]
 
 
