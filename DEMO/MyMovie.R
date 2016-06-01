@@ -3,9 +3,11 @@ library(data.table)
 library(dplyr)
 library(reshape2)
 library(gtools)
+setwd("C:/Users/howard.chu/Documents")
 argv<-commandArgs(TRUE)
 
 #argv <- gsub("\\,",replacement="\\,",argv)
+
 
 getelementmatrix=function(...)
 {
@@ -14,7 +16,8 @@ getelementmatrix=function(...)
 # x        <-c("hunter","knife","missal","animal","army")
 x        <-c(...)
 x2       <-strsplit(x,split=",",fixed=T)
-sumtable <-read.csv("C:/DEMO/summary.csv")
+
+sumtable <-read.csv("./GitHub/Dramaker/DEMO/summary.csv")
 sumtable <-sumtable[order(sumtable$IMDB,decreasing = TRUE),]
 
 
