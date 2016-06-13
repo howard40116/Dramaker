@@ -1,11 +1,13 @@
-﻿########################################################################################################STEP1
+########################################################################################################STEP1
 library(tm)
 library(dplyr)
 
+setwd("C:\\Users\\howard.chu\\Documents\\GitHub\\Dramaker\\Drama Maker0422\\R程式集\\12.文字探勘+過濾(NEW)")
+
 #檔案路徑
-path1 <- "C:/Users/howard/Desktop/script/dragon.txt"                                   ###檔案請存在C:/Users/howard/Desktop/script/
+path1 <- paste0(getwd(),"/script/dragon.txt")                                   ###檔案請存在C:/Users/howard/Desktop/script/
 #目錄路徑
-path2 <- "C:/Users/howard/Desktop/script"                                              ###第一次請改路徑
+path2 <- paste0(getwd(),"/script")                                             ###第一次請改路徑
 #讀txt檔看資料
 tmp1 <- readLines(file(path1,encoding = "UTF-8"))
 #讀目錄資訊
@@ -47,7 +49,7 @@ x1filtersort <- mores9
 
 
 ############################################################################################################STEP2
-###請先處理好典影的字幕
+###請先處理好電影的字幕
 #  格式請如下
 #      mores7 Freq
 #11 approaches   11
